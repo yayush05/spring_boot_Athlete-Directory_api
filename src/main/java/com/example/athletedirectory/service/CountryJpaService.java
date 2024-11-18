@@ -64,8 +64,9 @@ public class CountryJpaService implements CountryRepository {
         try {
             countryJpaRepository.deleteById(countryId);
         } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
+
     }
 
     @Override
