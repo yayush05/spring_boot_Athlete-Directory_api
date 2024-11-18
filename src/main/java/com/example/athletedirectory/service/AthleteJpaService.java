@@ -76,7 +76,7 @@ public class AthleteJpaService implements AthleteRepository {
         try {
             athleteJpaRepository.deleteById(athleteId);
         } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
 
